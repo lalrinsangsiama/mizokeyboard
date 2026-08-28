@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mizo Keyboard - Type in Mizo with Ease</title>
+    <meta name="description" content="The best keyboard for typing in Mizo language. Features autocorrect, word suggestions, special characters (Ṭ), and more.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e8f5e9 0%, #f9f9f9 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #219159 0%, #1A7345 100%);
+            color: white;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 27px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: #219159;
+            font-size: 72px;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero .tagline {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .app-store-badge img {
+            height: 50px;
+        }
+
+        .badge-placeholder {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 40px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            color: #219159;
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #219159;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        /* Special Character Section */
+        .special-char {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .special-char h2 {
+            color: #219159;
+            margin-bottom: 20px;
+        }
+
+        .char-display {
+            font-size: 4em;
+            color: #219159;
+            margin: 20px 0;
+        }
+
+        .char-variants {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .char-variant {
+            background: #e8f5e9;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.5em;
+        }
+
+        /* Privacy Section */
+        .privacy-banner {
+            background: #e8f5e9;
+            border-left: 4px solid #219159;
+            padding: 20px 25px;
+            border-radius: 0 10px 10px 0;
+            margin: 40px 0;
+        }
+
+        .privacy-banner h3 {
+            color: #219159;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+
+        footer a {
+            color: #219159;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .hero .tagline {
+                font-size: 1.1em;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+                font-size: 60px;
+            }
+
+            .char-display {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="logo">Ṭ</div>
+            <h1>Mizo Keyboard</h1>
+            <p class="tagline">Type in Mizo with ease</p>
+            <div class="badge-placeholder">Coming Soon to App Store</div>
+            <!-- Replace with actual App Store badge when available:
+            <a href="https://apps.apple.com/app/mizo-keyboard" class="app-store-badge">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+            -->
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="features">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⌨️</div>
+                    <h3>Native Mizo Support</h3>
+                    <p>Full support for Mizo language including the special Ṭ character with easy access via long-press.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Smart Autocorrect</h3>
+                    <p>Intelligent autocorrect that understands Mizo spelling patterns and common mistakes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Bilingual Dictionary</h3>
+                    <p>Built-in Mizo-English dictionary with 300+ entries. Long-press any suggestion for definitions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Quick Phrases</h3>
+                    <p>Common Mizo greetings and phrases at your fingertips for quick insertion.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Text Expansion</h3>
+                    <p>Create shortcuts for frequently used phrases. Type "kle" to get "Ka lawm e".</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👆</div>
+                    <h3>Swipe Typing</h3>
+                    <p>Glide your finger across keys to type faster with gesture-based input.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="special-char">
+            <h2>The Special Mizo Character</h2>
+            <p>Easy access to Ṭ and all its variants</p>
+            <div class="char-display">Ṭ ṭ</div>
+            <p>Long-press T to access Ṭ and other Mizo-specific characters</p>
+            <div class="char-variants">
+                <span class="char-variant">á à â</span>
+                <span class="char-variant">é è ê</span>
+                <span class="char-variant">í ì î</span>
+                <span class="char-variant">ṭ Ṭ</span>
+            </div>
+        </section>
+
+        <div class="privacy-banner">
+            <h3>🔒 Privacy First</h3>
+            <p>We never collect or transmit your keystrokes. All your data stays on your device. <a href="privacy-policy.html">Read our Privacy Policy</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+            <a href="mailto:lalrin.sangsiama@gmail.com">Contact</a>
+        </div>
+        <p>&copy; 2026 Mizo Keyboard. Made with ❤️ for the Mizo community.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mizo Keyboard - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #219159;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2DB86F, #1A7345);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #219159;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            color: #219159;
+            font-size: 1.4em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .contact-box h3 {
+            color: #219159;
+            margin-bottom: 15px;
+        }
+
+        .contact-email {
+            font-size: 1.3em;
+            color: #219159;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: #f9f9f9;
+            padding: 18px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #333;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: #f0f0f0;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4em;
+            color: #219159;
+            font-weight: bold;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: white;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            margin-bottom: 10px;
+        }
+
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Setup Guide */
+        .setup-steps {
+            counter-reset: step;
+        }
+
+        .setup-step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 12px;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: #219159;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .step-content h4 {
+            color: #219159;
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            color: #666;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        a {
+            color: #219159;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .setup-step {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Ṭ</div>
+            <h1>Mizo Keyboard</h1>
+            <p class="subtitle">Support & Help</p>
+        </header>
+
+        <main>
+            <div class="contact-box">
+                <h3>Need Help?</h3>
+                <p>We're here to help! Contact us at:</p>
+                <a href="mailto:lalrin.sangsiama@gmail.com" class="contact-email">lalrin.sangsiama@gmail.com</a>
+            </div>
+
+            <h2>Setup Guide</h2>
+            <p>Follow these steps to enable Mizo Keyboard on your iPhone:</p>
+
+            <div class="setup-steps">
+                <div class="setup-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Open Settings</h4>
+                        <p>Go to your iPhone's Settings app</p>
+                    </div>
+                </div>
+                <div class="setup-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Navigate to Keyboard Settings</h4>
+                        <p>Tap General → Keyboard → Keyboards</p>
+                    </div>
+                </div>
+                <div class="setup-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Add New Keyboard</h4>
+                        <p>Tap "Add New Keyboard..." and select "Mizo Keyboard"</p>
+                    </div>
+                </div>
+                <div class="setup-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Enable Full Access (Optional)</h4>
+                        <p>Tap on Mizo Keyboard and enable "Allow Full Access" for GIF and sticker features. This is optional - basic typing works without it.</p>
+                    </div>
+                </div>
+                <div class="setup-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Start Using</h4>
+                        <p>Open any app with a text field, tap the globe 🌐 icon to switch to Mizo Keyboard</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I type the Ṭ character?</div>
+                <div class="faq-answer">
+                    <p>Long-press the T key on the keyboard. A popup will appear with Ṭ and other variants. Slide your finger to select the one you want.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I access accented vowels (á, é, í, etc.)?</div>
+                <div class="faq-answer">
+                    <p>Long-press any vowel key (A, E, I, O, U) to see all available accent marks and tone variants commonly used in Mizo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my typing data safe?</div>
+                <div class="faq-answer">
+                    <p>Yes! Mizo Keyboard does not collect, store, or transmit your keystrokes. All data stays on your device. Read our <a href="privacy-policy.html">Privacy Policy</a> for more details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why does the keyboard ask for "Full Access"?</div>
+                <div class="faq-answer">
+                    <p>Full Access is only needed for features that require internet access, like GIF search. Basic typing, autocorrect, and all core features work without Full Access. We recommend enabling it only if you want to use GIFs and stickers.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I access GIFs, Stickers, and Phrases?</div>
+                <div class="faq-answer">
+                    <p>Long-press the emoji button (😊) on the bottom row. A popup will appear with options for Stickers, GIF, Phrases, and Clipboard.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does Text Expansion work?</div>
+                <div class="faq-answer">
+                    <p>Text expansion lets you create shortcuts. For example, typing "kle" can automatically expand to "Ka lawm e". You can manage your shortcuts in the main app settings.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">The keyboard isn't showing up. What should I do?</div>
+                <div class="faq-answer">
+                    <p>Try these steps:</p>
+                    <p>1. Make sure the keyboard is added in Settings → General → Keyboard → Keyboards</p>
+                    <p>2. Restart your iPhone</p>
+                    <p>3. If still not working, remove the keyboard and add it again</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How can I suggest new words for the dictionary?</div>
+                <div class="faq-answer">
+                    <p>Email us at lalrin.sangsiama@gmail.com with word suggestions — we review and add new Mizo words in app updates.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I use swipe typing?</div>
+                <div class="faq-answer">
+                    <p>Yes! Swipe typing is enabled by default. Simply glide your finger from letter to letter without lifting, and the keyboard will predict your word.</p>
+                </div>
+            </div>
+
+            <h2>Report a Bug</h2>
+            <p>Found a bug or issue? Please email us at <a href="mailto:lalrin.sangsiama@gmail.com">lalrin.sangsiama@gmail.com</a> with:</p>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li>Your iPhone model and iOS version</li>
+                <li>Description of the issue</li>
+                <li>Steps to reproduce the problem</li>
+                <li>Screenshots if possible</li>
+            </ul>
+
+            <h2>Feature Requests</h2>
+            <p>Have an idea to make Mizo Keyboard better? We'd love to hear from you! Send your suggestions to <a href="mailto:lalrin.sangsiama@gmail.com">lalrin.sangsiama@gmail.com</a>.</p>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Mizo Keyboard. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="index.html">Home</a> &bull;
+                <a href="privacy-policy.html">Privacy Policy</a> &bull;
+                <a href="support.html">Support</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
